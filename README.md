@@ -1,14 +1,12 @@
 ![Banner](assets/banner.png)
 
-# 🎓 UniMate AI
+# UniMate AI
 
 Hybrid RAG Academic Assistant for International Students
 
----
+## Features
 
-# 🚀 Features
-
-- PDF Upload & Parsing
+- PDF Upload and Parsing
 - Hybrid RAG Retrieval
 - FAISS Semantic Search
 - BM25 Keyword Search
@@ -19,101 +17,75 @@ Hybrid RAG Academic Assistant for International Students
 - General Question Answering
 - Retrieved Source Display
 
----
-
-# 🧠 System Architecture
+## System Architecture
 
 ![Architecture](assets/architecture.png)
 
----
+## Screenshots
 
-# 🖼️ Screenshots
-
-## 🏠 Home Interface
+### Home Interface
 
 ![Home](assets/home.png)
 
----
-
-## 📚 Multiple AI Modes
+### Multiple AI Modes
 
 ![Modes](assets/modes.png)
 
----
-
-## 📄 Research Paper Summary
+### Research Paper Summary
 
 ![Research Summary](assets/research_summary.png)
 
----
-
-## 📝 Exam Preparation Mode
+### Exam Preparation Mode
 
 ![Exam](assets/exam_mode.png)
 
----
-
-## 📖 Assignment Explanation
+### Assignment Explanation
 
 ![Assignment](assets/assignment_mode.png)
 
----
-
-## 🔍 Retrieved Sources
+### Retrieved Sources
 
 ![Retrieval](assets/retrieval.png)
 
----
-
-## 📄 PDF Preview
+### PDF Preview
 
 ![Preview](assets/preview_document.png)
 
----
+## Installation
 
-# ⚙️ Installation
-
-## 1. Create Virtual Environment
+### 1. Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
----
+### 2. Activate Environment
 
-## 2. Activate Environment
-
-### Windows
+Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-### Mac/Linux
+Mac/Linux:
 
 ```bash
 source .venv/bin/activate
 ```
 
----
-
-## 3. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 4. Run Project
+### 4. Run Project
 
 ```bash
 streamlit run app.py
 ```
 
----
-
-# 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Usage |
 |---|---|
@@ -125,9 +97,7 @@ streamlit run app.py
 | FAISS | Vector Search |
 | BM25 | Keyword Retrieval |
 
----
-
-# 📂 Project Structure
+## Project Structure
 
 ```text
 API大模型RAG与智能体开发/
@@ -148,34 +118,25 @@ API大模型RAG与智能体开发/
 │   └── preview_document.png
 ```
 
----
+## Project Highlights
 
-# ⭐ Project Highlights
-
-- Hybrid Retrieval using FAISS + BM25
-- Multi-mode Prompt Engineering
+- Hybrid Retrieval using FAISS and BM25
+- Multi-mode Academic Assistant
 - Research Paper Understanding
 - Exam Preparation Workflow
-- Assignment Explanation Mode
-- Retrieved Source Display
-- Interactive Streamlit UI
-- Academic AI Assistant for International Students
+- Interactive Streamlit Interface
+- Explainable Retrieval Results
 
----
-
-# 🚀 Future Improvements
+## Future Improvements
 
 - Multi-file RAG
 - Conversation Memory
 - Citation Generation
-- Page-level Source Tracking
 - OCR Support
 - Local LLM Support
-- Web Deployment
+- Cloud Deployment
 
----
-
-# 👨‍💻 Author
+## Author
 
 Developed for:
 
