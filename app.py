@@ -350,7 +350,7 @@ if st.button("Ask AI"):
 
         with st.spinner("Generating answer..."):
             response = client.chat.completions.create(
-                model="qwen-plus",
+                model="qwen-turbo",
                 messages=[
                     {"role": "user", "content": prompt}
                 ]
