@@ -24,8 +24,8 @@ import numpy as np
 # API Client
 # =========================
 client = OpenAI(
-    api_key=st.secrets["DASHSCOPE_API_KEY"],
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+    api_key=st.secrets["OPENROUTER_API_KEY"],
+    base_url="https://openrouter.ai/api/v1"
 )
 
 
@@ -350,7 +350,7 @@ if st.button("Ask AI"):
 
         with st.spinner("Generating answer..."):
             response = client.chat.completions.create(
-                model="qwen-turbo",
+                model="meta-llama/llama-3.1-8b-instruct:free",
                 messages=[
                     {"role": "user", "content": prompt}
                 ]
