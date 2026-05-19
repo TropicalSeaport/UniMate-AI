@@ -20,8 +20,11 @@ import faiss
 import numpy as np
 
 
+# =========================
+# API Client
+# =========================
 client = OpenAI(
-    api_key="sk-d15473ac6a37443db5ab4513b9948fce",
+    api_key=st.secrets["DASHSCOPE_API_KEY"],
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 )
 
@@ -115,6 +118,7 @@ Answer Requirements:
 
 def hybrid_retrieve(question, chunks, index, embedding_model, bm25, top_k):
     history_questions = []
+
     for chat in st.session_state.chat_history[-3:]:
         history_questions.append(chat["question"])
 
@@ -128,7 +132,7 @@ def hybrid_retrieve(question, chunks, index, embedding_model, bm25, top_k):
     question_embedding = np.array(question_embedding, dtype=np.float32)
 
     vector_k = min(top_k * 2, len(chunks))
-    D, I = index.search(question_embedding, k=vector_k)
+    _, I = index.search(question_embedding, k=vector_k)
 
     vector_results = {}
     for rank, idx in enumerate(I[0]):
@@ -184,7 +188,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🎓 UniMate AI")
+st.title("UniMate AI")
 st.caption("Hybrid RAG Academic Assistant for International Students")
 
 st.write(
@@ -209,7 +213,7 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 
-st.sidebar.title("⚙️ Settings")
+st.sidebar.title("Settings")
 
 mode = st.sidebar.selectbox(
     "Choose Mode",
